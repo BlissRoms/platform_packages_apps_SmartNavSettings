@@ -38,8 +38,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
 
-import com.blissroms.blissify.preference.PackageListAdapter;
-import com.blissroms.blissify.preference.PackageListAdapter.PackageItem;
+import com.bliss.support.preferences.PackageListAdapter;
+import com.bliss.support.preferences.PackageListAdapter.PackageItem;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;

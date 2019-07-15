@@ -57,7 +57,7 @@ import com.android.internal.utils.Config.ButtonConfig;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.blissroms.blissify.preference.CustomSeekBarPreference;
+import com.bliss.support.preferences.CustomSeekBarPreference;
 
 public class SmartbarSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {

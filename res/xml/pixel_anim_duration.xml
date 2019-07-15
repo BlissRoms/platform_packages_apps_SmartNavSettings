@@ -29,7 +29,7 @@
             android:icon="@drawable/pixel_navbar_icon"
             android:selectable="false"/>
 
-    <com.blissroms.blissify.preference.CustomSeekBarPreference
+    <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="opa_anim_duration_x"
         android:title="@string/pixel_anim_x_title"
         android:max="1000"
@@ -38,7 +38,7 @@
         android:persistent="false" />
 
 
-    <com.blissroms.blissify.preference.CustomSeekBarPreference
+    <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="opa_anim_duration_y"
         android:title="@string/pixel_anim_y_title"
         android:max="1000"
@@ -46,7 +46,7 @@
         settings:units="ms"
         android:persistent="false" />
 
-    <com.blissroms.blissify.preference.CustomSeekBarPreference
+    <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="collapse_anim_duration_ry"
         android:title="@string/collapse_anim_duration_ry_title"
         android:max="1000"
@@ -55,7 +55,7 @@
         android:persistent="false" />
 
 
-    <com.blissroms.blissify.preference.CustomSeekBarPreference
+    <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="collapse_anim_duration_bg"
         android:title="@string/collapse_anim_duration_bg_title"
         android:max="1000"
@@ -63,7 +63,7 @@
         settings:units="ms"
         android:persistent="false" />
 
-    <com.blissroms.blissify.preference.CustomSeekBarPreference
+    <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="retract_anim_duration"
         android:title="@string/retract_anim_duration_title"
         android:max="1000"
@@ -72,7 +72,7 @@
         android:persistent="false" />
 
 
-    <com.blissroms.blissify.preference.CustomSeekBarPreference
+    <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="diamond_anim_duration"
         android:title="@string/diamond_anim_duration_title"
         android:max="1000"
@@ -80,7 +80,7 @@
         settings:units="ms"
         android:persistent="false" />
 
-    <com.blissroms.blissify.preference.CustomSeekBarPreference
+    <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="dots_anim_duration"
         android:title="@string/dots_anim_duration_title"
         android:max="1000"
@@ -89,7 +89,7 @@
         android:persistent="false" />
 
 
-    <com.blissroms.blissify.preference.CustomSeekBarPreference
+    <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="home_resize_anim_duration"
         android:title="@string/home_resize_anim_duration_title"
         android:max="1000"
@@ -108,19 +108,19 @@
         android:key="pixel_anim_color"
         android:title="@string/pixel_anim_color_title">
 
-         <com.android.settings.bliss.preference.ColorPickerPreference
+         <com.bliss.support.colorpicker.ColorPickerPreference
             android:key="dot_top_color"
             android:title="@string/dot_top_color_title" />
 
-         <com.android.settings.bliss.preference.ColorPickerPreference
+         <com.bliss.support.colorpicker.ColorPickerPreference
             android:key="dot_left_color"
             android:title="@string/dot_left_color_title" />
 
-         <com.android.settings.bliss.preference.ColorPickerPreference
+         <com.bliss.support.colorpicker.ColorPickerPreference
             android:key="dot_right_color"
             android:title="@string/dot_right_color_title" />
 
-         <com.android.settings.bliss.preference.ColorPickerPreference
+         <com.bliss.support.colorpicker.ColorPickerPreference
             android:key="dot_bottom_color"
             android:title="@string/dot_bottom_color_title" />
 
