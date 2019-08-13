@@ -58,6 +58,7 @@
     <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="navbar_buttons_alpha"
         android:title="@string/navbar_buttons_alpha_title"
+        allowEditText="true"
         android:max="255"
         settings:min="0"
         settings:units=""
@@ -66,6 +67,7 @@
     <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="smartbar_custom_icon_size"
         android:title="@string/smartbar_custom_icon_size_title"
+        allowEditText="true"
         android:max="100"
         settings:min="10"
         settings:units="%"

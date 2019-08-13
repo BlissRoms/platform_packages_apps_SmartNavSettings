@@ -32,6 +32,7 @@
     <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="opa_anim_duration_x"
         android:title="@string/pixel_anim_x_title"
+        allowEditText="true"
         android:max="1000"
         settings:min="50"
         settings:units="ms"
@@ -41,6 +42,7 @@
     <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="opa_anim_duration_y"
         android:title="@string/pixel_anim_y_title"
+        allowEditText="true"
         android:max="1000"
         settings:min="50"
         settings:units="ms"
@@ -49,6 +51,7 @@
     <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="collapse_anim_duration_ry"
         android:title="@string/collapse_anim_duration_ry_title"
+        allowEditText="true"
         android:max="1000"
         settings:min="50"
         settings:units="ms"
@@ -58,6 +61,7 @@
     <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="collapse_anim_duration_bg"
         android:title="@string/collapse_anim_duration_bg_title"
+        allowEditText="true"
         android:max="1000"
         settings:min="50"
         settings:units="ms"
@@ -66,6 +70,7 @@
     <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="retract_anim_duration"
         android:title="@string/retract_anim_duration_title"
+        allowEditText="true"
         android:max="1000"
         settings:min="50"
         settings:units="ms"
@@ -75,6 +80,7 @@
     <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="diamond_anim_duration"
         android:title="@string/diamond_anim_duration_title"
+        allowEditText="true"
         android:max="1000"
         settings:min="50"
         settings:units="ms"
@@ -83,6 +89,7 @@
     <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="dots_anim_duration"
         android:title="@string/dots_anim_duration_title"
+        allowEditText="true"
         android:max="1000"
         settings:min="50"
         settings:units="ms"
@@ -92,6 +99,7 @@
     <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="home_resize_anim_duration"
         android:title="@string/home_resize_anim_duration_title"
+        allowEditText="true"
         android:max="1000"
         settings:min="50"
         settings:units="ms"

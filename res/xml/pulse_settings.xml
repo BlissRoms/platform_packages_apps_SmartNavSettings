@@ -88,6 +88,7 @@
     <com.bliss.support.preferences.CustomSeekBarPreference
         android:key="pulse_custom_buttons_opacity"
         android:title="@string/pulse_custom_buttons_opacity_title"
+        allowEditText="true"
         android:max="255"
         settings:min="0"
         android:dependency="eos_fling_show_pulse"/>
@@ -99,6 +100,7 @@
         <com.bliss.support.preferences.CustomSeekBarPreference
             android:key="pulse_custom_dimen"
             android:title="@string/pulse_custom_dimen"
+            allowEditText="true"
             android:max="30"
             settings:min="1"
             settings:units="dp"
@@ -107,6 +109,7 @@
         <com.bliss.support.preferences.CustomSeekBarPreference
             android:key="pulse_custom_div"
             android:title="@string/pulse_custom_div"
+            allowEditText="true"
             android:max="44"
             settings:min="2"
             settings:interval="2"
@@ -116,6 +119,7 @@
         <com.bliss.support.preferences.CustomSeekBarPreference
             android:key="pulse_filled_block_size"
             android:title="@string/pulse_filled_block_size"
+            allowEditText="true"
             android:max="8"
             settings:min="4"
             settings:units="dp"
@@ -124,6 +128,7 @@
         <com.bliss.support.preferences.CustomSeekBarPreference
             android:key="pulse_empty_block_size"
             android:title="@string/pulse_empty_block_size"
+            allowEditText="true"
             android:max="4"
             settings:min="0"
             settings:units="dp"
@@ -132,6 +137,7 @@
         <com.bliss.support.preferences.CustomSeekBarPreference
             android:key="pulse_custom_fudge_factor"
             android:title="@string/pulse_custom_fudge_factor"
+            allowEditText="true"
             android:max="6"
             settings:min="2"
             android:dependency="pulse_fading_bars_category"/>
@@ -139,6 +145,7 @@
         <com.bliss.support.preferences.CustomSeekBarPreference
             android:key="pulse_fading_blocks_opacity"
             android:title="@string/pulse_fading_blocks_opacity"
+            allowEditText="true"
             android:max="255"
             settings:min="0"
             android:dependency="eos_fling_show_pulse" />
@@ -146,6 +153,7 @@
         <com.bliss.support.preferences.CustomSeekBarPreference
             android:key="fling_pulse_lavalamp_speed"
             android:title="@string/lavamp_solid_speed_title"
+            allowEditText="true"
             android:max="30000"
             settings:min="200"
             settings:interval="200"
@@ -160,6 +168,7 @@
         <com.bliss.support.preferences.CustomSeekBarPreference
             android:key="pulse_solid_units_opacity"
             android:title="@string/pulse_solid_units_opacity"
+            allowEditText="true"
             android:max="255"
             settings:min="0"
             android:dependency="pulse_2"/>
@@ -167,6 +176,7 @@
         <com.bliss.support.preferences.CustomSeekBarPreference
             android:key="pulse_solid_units_count"
             android:title="@string/pulse_solid_units_count"
+            allowEditText="true"
             android:max="128"
             settings:interval="16"
             settings:min="32"
@@ -175,6 +185,7 @@
         <com.bliss.support.preferences.CustomSeekBarPreference
             android:key="pulse_solid_fudge_factor"
             android:title="@string/pulse_custom_fudge_factor"
+            allowEditText="true"
             android:max="7"
             settings:min="2"
             android:dependency="pulse_2"/>
@@ -182,6 +193,7 @@
         <com.bliss.support.preferences.CustomSeekBarPreference
             android:key="lavamp_solid_speed"
             android:title="@string/lavamp_solid_speed_title"
+            allowEditText="true"
             android:max="30000"
             settings:min="200"
             settings:interval="200"
