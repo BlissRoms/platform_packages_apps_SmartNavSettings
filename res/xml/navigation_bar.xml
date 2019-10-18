@@ -56,6 +56,13 @@
                 android:fragment="com.blissroms.blissify.fragments.buttons.NavBar"
                 />
 
+     <PreferenceScreen
+                android:key="op_gesture_settings"
+                android:title="@string/op_gesture_title"
+                android:summary="@string/op_gesture_summary"
+                android:fragment="com.blissroms.blissify.fragments.buttons.OPGesture"
+                />
+
         <Preference
             android:key="swipeup_gesture_settings"
             android:title="@string/swipe_up_to_switch_apps_title"
