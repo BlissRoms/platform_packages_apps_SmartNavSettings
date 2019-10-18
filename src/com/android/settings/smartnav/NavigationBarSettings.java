@@ -46,6 +46,7 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
     private static final String NAVBAR_VISIBILITY = "navbar_visibility";
     private static final String KEY_NAVBAR_MODE = "navbar_mode";
     private static final String KEY_DEFAULT_NAVBAR_SETTINGS = "default_settings";
+    private static final String KEY_OP_GESTURES_SETTINGS = "op_gesture_settings";
     private static final String KEY_SWIPE_GESTURES_SETTINGS = "swipeup_gesture_settings";
     private static final String KEY_FLING_NAVBAR_SETTINGS = "fling_settings";
     private static final String KEY_CATEGORY_NAVIGATION_INTERFACE = "category_navbar_interface";
@@ -65,6 +66,7 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
     private PreferenceCategory mNavGeneral;
     private PreferenceScreen mSmartbarSettings;
     private Preference mDefaultSettings;
+    private Preference mOPSettings;
     private Preference mSwipeupSettings;
     private CustomSeekBarPreference mBarHeightPort;
     private CustomSeekBarPreference mBarHeightLand;
@@ -82,6 +84,7 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
         mNavbarVisibility = (SwitchPreference) findPreference(NAVBAR_VISIBILITY);
         mNavbarMode = (ListPreference) findPreference(KEY_NAVBAR_MODE);
         mDefaultSettings = (Preference) findPreference(KEY_DEFAULT_NAVBAR_SETTINGS);
+        mOPSettings = (Preference) findPreference(KEY_OP_GESTURES_SETTINGS));
         mSwipeupSettings = (Preference) findPreference(KEY_SWIPE_GESTURES_SETTINGS);
         mFlingSettings = (PreferenceScreen) findPreference(KEY_FLING_NAVBAR_SETTINGS);
         mSmartbarSettings = (PreferenceScreen) findPreference(KEY_SMARTBAR_SETTINGS);
@@ -146,6 +149,8 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
                 mSmartbarSettings.setSelectable(false);
                 mFlingSettings.setEnabled(false);
                 mFlingSettings.setSelectable(false);
+                mOPSettings.setEnabled(false);
+                mOPSettings.setSelectable(false);
                 break;
             case 1:
                 mDefaultSettings.setEnabled(false);
@@ -157,6 +162,8 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
                 mSmartbarSettings.setSelectable(true);
                 mFlingSettings.setEnabled(false);
                 mFlingSettings.setSelectable(false);
+                mOPSettings.setEnabled(false);
+                mOPSettings.setSelectable(false);
                 break;
             case 2:
                 mDefaultSettings.setEnabled(false);
@@ -168,6 +175,21 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
                 mSmartbarSettings.setSelectable(false);
                 mFlingSettings.setEnabled(true);
                 mFlingSettings.setSelectable(true);
+                mOPSettings.setEnabled(false);
+                mOPSettings.setSelectable(false);
+                break;
+            case 3:
+                mOPSettings.setEnabled(true);
+                mOPSettings.setSelectable(true);
+                mDefaultSettings.setEnabled(false);
+                mDefaultSettings.setSelectable(false);
+                disableSwipeup();
+                mSwipeupSettings.setEnabled(false);
+                mSwipeupSettings.setSelectable(false);
+                mSmartbarSettings.setEnabled(false);
+                mSmartbarSettings.setSelectable(false);
+                mFlingSettings.setEnabled(false);
+                mFlingSettings.setSelectable(false);
                 break;
         }
     }
