@@ -251,5 +251,9 @@
     <string name="dlg_reset_android">Default</string>
     <string name="dlg_reset_bliss">Bliss</string>
 
+    <string name="op_gesture_interface">OP Gestures</string>
+    <string name="op_gesture_title">OP Gestures</string>
+    <string name="op_gesture_summary">OnePlus navigation gestures</string>
+
 
 </resources>
