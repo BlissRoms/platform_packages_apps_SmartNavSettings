@@ -107,7 +107,6 @@
             android:key="burn_in_protection"
             android:title="@string/burn_in_protection_title"
             android:summary="@string/burn_in_protection_summary"
-            android:dependency="navbar_visibility"
             android:defaultValue="true" />
 
          <com.bliss.support.preferences.CustomSeekBarPreference
