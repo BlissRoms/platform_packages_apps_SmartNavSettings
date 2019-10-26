@@ -51,6 +51,7 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
     private static final String KEY_FLING_NAVBAR_SETTINGS = "fling_settings";
     private static final String KEY_CATEGORY_NAVIGATION_INTERFACE = "category_navbar_interface";
     private static final String KEY_CATEGORY_NAVIGATION_GENERAL = "category_navbar_general";
+    private static final String KEY_CATEGORY_NAVIGATION_BURNIN = "navigation_burnin";
     private static final String KEY_NAVIGATION_BAR_LEFT = "navigation_bar_left";
     private static final String KEY_SMARTBAR_SETTINGS = "smartbar_settings";
     private static final String KEY_NAVIGATION_HEIGHT_PORT = "navbar_height_portrait";
@@ -64,6 +65,7 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
     private PreferenceScreen mFlingSettings;
     private PreferenceCategory mNavInterface;
     private PreferenceCategory mNavGeneral;
+    private PreferenceCategory mNavBurnin;
     private PreferenceScreen mSmartbarSettings;
     private Preference mDefaultSettings;
     private Preference mOPSettings;
@@ -81,6 +83,7 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
 
         mNavInterface = (PreferenceCategory) findPreference(KEY_CATEGORY_NAVIGATION_INTERFACE);
         mNavGeneral = (PreferenceCategory) findPreference(KEY_CATEGORY_NAVIGATION_GENERAL);
+        mNavBurnin = (PreferenceCategory) findPreference(KEY_CATEGORY_NAVIGATION_BURNIN);
         mNavbarVisibility = (SwitchPreference) findPreference(NAVBAR_VISIBILITY);
         mNavbarMode = (ListPreference) findPreference(KEY_NAVBAR_MODE);
         mDefaultSettings = (Preference) findPreference(KEY_DEFAULT_NAVBAR_SETTINGS);
@@ -138,6 +141,7 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
             case 0:
                 mDefaultSettings.setEnabled(true);
                 mDefaultSettings.setSelectable(true);
+                enableDefault();
                 if (isPieRecentsEnabled()) {
                 mSwipeupSettings.setEnabled(true);
                 mSwipeupSettings.setSelectable(true);
@@ -156,6 +160,7 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
                 mDefaultSettings.setEnabled(false);
                 mDefaultSettings.setSelectable(false);
                 disableSwipeup();
+                enableDefault();
                 mSwipeupSettings.setEnabled(false);
                 mSwipeupSettings.setSelectable(false);
                 mSmartbarSettings.setEnabled(true);
@@ -169,6 +174,7 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
                 mDefaultSettings.setEnabled(false);
                 mDefaultSettings.setSelectable(false);
                 disableSwipeup();
+                enableDefault();
                 mSwipeupSettings.setEnabled(false);
                 mSwipeupSettings.setSelectable(false);
                 mSmartbarSettings.setEnabled(false);
@@ -184,6 +190,7 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
                 mDefaultSettings.setEnabled(false);
                 mDefaultSettings.setSelectable(false);
                 disableSwipeup();
+                enableOP();
                 mSwipeupSettings.setEnabled(false);
                 mSwipeupSettings.setSelectable(false);
                 mSmartbarSettings.setEnabled(false);
@@ -204,10 +211,26 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
             Settings.Secure.SWIPE_UP_TO_SWITCH_APPS_ENABLED, 0);
     }
 
+    private void enableDefault() {
+       Settings.Secure.putInt(getContentResolver(),
+            Settings.Secure.NAVIGATION_BAR_VISIBLE, 1);
+
+       Settings.Secure.putInt(getContentResolver(),
+            Settings.System.OMNI_USE_BOTTOM_GESTURE_NAVIGATION, 0);
+    }
+
+    private void enableOP() {
+       Settings.Secure.putInt(getContentResolver(),
+            Settings.System.OMNI_USE_BOTTOM_GESTURE_NAVIGATION, 1);
+
+       Settings.Secure.putInt(getContentResolver(),
+            Settings.Secure.NAVIGATION_BAR_VISIBLE, 0);
+    }
+
     private void updateBarVisibleAndUpdatePrefs(boolean showing) {
         mNavbarVisibility.setChecked(showing);
-        mNavInterface.setEnabled(mNavbarVisibility.isChecked());
         mNavGeneral.setEnabled(mNavbarVisibility.isChecked());
+        mNavBurnin.setEnabled(mNavbarVisibility.isChecked());
     }
 
     @Override
