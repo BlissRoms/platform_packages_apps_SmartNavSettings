@@ -22,10 +22,6 @@
         android:key="bliss_logo"
         android:layout="@layout/bliss_logo" />
 
-    <SwitchPreference
-        android:key="navbar_visibility"
-        android:title="@string/navbar_visibility" />
-
     <PreferenceCategory
         android:key="category_navbar_interface"
         android:title="@string/navbar_interface_title" >
@@ -107,7 +103,6 @@
             android:key="burn_in_protection"
             android:title="@string/burn_in_protection_title"
             android:summary="@string/burn_in_protection_summary"
-            android:dependency="navbar_visibility"
             android:defaultValue="true" />
 
          <com.bliss.support.preferences.CustomSeekBarPreference
